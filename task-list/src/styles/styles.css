@@ -2,10 +2,9 @@ body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #e0e5ec;
+      background-color: #f0f4f8;
       /* Azul claro */
       color: #333;
-      /* Color de texto oscuro */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -13,15 +12,25 @@ body {
 }
 
 .App {
-      max-width: 1200px;
-      width: 120%;
+      max-width: 800px;
+      width: 100%;
       margin: 0 auto;
       padding: 20px;
-      background-color: #f0f5fc;
-      /* Azul más claro */
+      background-color: #ffffff;
+      /* Blanco */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
       text-align: center;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+      to {
+            opacity: 1;
+            transform: translateY(0);
+      }
 }
 
 header {
@@ -50,12 +59,14 @@ li {
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 li:hover {
       transform: scale(1.05);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      background-color: #f9f9f9;
+      /* Cambia el color al pasar el mouse */
 }
 
 button {
@@ -77,8 +88,50 @@ button:hover {
 }
 
 input {
-      margin-bottom: 10px;
-      padding: 10px;
+      margin: 8px;
+      padding: 8px;
+      font-size: 16px;
       border: 1px solid #ccc;
       border-radius: 4px;
+      transition: border-color 0.3s ease;
 }
+
+input:focus {
+      border-color: #3498db;
+      /* Cambia el color del borde al enfocar */
+}
+
+button {
+  background-color: #3498db; /* Azul */
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9; /* Azul más oscuro */
+  transform: scale(1.1);
+}
+
+/* Nuevo estilo para el botón de descripción */
+.show-description-button {
+  background-color: #27ae60; /* Verde */
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-top: 8px; /* Ajusta el espacio entre el título y el botón */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.show-description-button:hover {
+  background-color: #219653; /* Verde más oscuro */
+  transform: scale(1.1);
+}
+
