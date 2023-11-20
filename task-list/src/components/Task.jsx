@@ -1,16 +1,15 @@
+// components/Task.jsx
 import React from 'react';
 
-const Task = ({ name, description, onToggle }) => {
+function Task({ name, completed, onToggle }) {
   return (
     <div>
       <label>
-        <input type="checkbox" onChange={onToggle} />
-        <strong>{name}</strong>
+        <input type="checkbox" checked={completed} onChange={onToggle} />
+        {name}
       </label>
-      <p>{description}</p>
     </div>
   );
-};
+}
 
 export default Task;
-
