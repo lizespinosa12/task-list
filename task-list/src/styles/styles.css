@@ -2,9 +2,10 @@ body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f0f4f8;
-      /* Azul claro */
+      background-color: #001f3f;
+      /* Azul oscuro */
       color: #333;
+      /* Color de texto oscuro */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -54,6 +55,8 @@ ul {
 }
 
 li {
+      position: relative;
+      /* Establece la posición relativa */
       background-color: #ffffff;
       margin: 15px 0;
       padding: 20px;
@@ -85,6 +88,8 @@ button:hover {
       background-color: #2980b9;
       /* Azul más oscuro */
       transform: scale(1.1);
+      margin-left: 8px;
+      /* Ajusta el espacio entre los botones */
 }
 
 input {
@@ -101,37 +106,22 @@ input:focus {
       /* Cambia el color del borde al enfocar */
 }
 
-button {
-  background-color: #3498db; /* Azul */
-  color: #ffffff;
-  border: none;
-  padding: 8px 12px;
-  font-size: 14px;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-button:hover {
-  background-color: #2980b9; /* Azul más oscuro */
-  transform: scale(1.1);
-}
-
-/* Nuevo estilo para el botón de descripción */
 .show-description-button {
-  background-color: #27ae60; /* Verde */
-  color: #ffffff;
-  border: none;
-  padding: 8px 12px;
-  font-size: 14px;
-  cursor: pointer;
-  border-radius: 6px;
-  margin-top: 8px; /* Ajusta el espacio entre el título y el botón */
-  transition: background-color 0.3s ease, transform 0.3s ease;
+      background-color: #27ae60;
+      /* Verde */
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 6px;
+      margin-top: 8px;
+      /* Ajusta el espacio entre el título y el botón */
+      transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .show-description-button:hover {
-  background-color: #219653; /* Verde más oscuro */
-  transform: scale(1.1);
+      background-color: #219653;
+      /* Verde más oscuro */
+      transform: scale(1.1);
 }
-
