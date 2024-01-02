@@ -1,3 +1,5 @@
+/* styles.css */
+
 body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
@@ -5,7 +7,6 @@ body {
       background-color: #001f3f;
       /* Azul oscuro */
       color: #333;
-      /* Color de texto oscuro */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -14,9 +15,9 @@ body {
 
 .App {
       max-width: 800px;
-      width: 100%;
+      width: 110%;
       margin: 0 auto;
-      padding: 20px;
+      padding: 15px;
       background-color: #ffffff;
       /* Blanco */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -25,13 +26,6 @@ body {
       opacity: 0;
       transform: translateY(-20px);
       animation: fadeInUp 0.5s ease forwards;
-}
-
-@keyframes fadeInUp {
-      to {
-            opacity: 1;
-            transform: translateY(0);
-      }
 }
 
 header {
@@ -55,8 +49,6 @@ ul {
 }
 
 li {
-      position: relative;
-      /* Establece la posición relativa */
       background-color: #ffffff;
       margin: 15px 0;
       padding: 20px;
@@ -88,8 +80,6 @@ button:hover {
       background-color: #2980b9;
       /* Azul más oscuro */
       transform: scale(1.1);
-      margin-left: 8px;
-      /* Ajusta el espacio entre los botones */
 }
 
 input {
@@ -106,6 +96,25 @@ input:focus {
       /* Cambia el color del borde al enfocar */
 }
 
+button {
+      background-color: #3498db;
+      /* Azul */
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+      background-color: #2980b9;
+      /* Azul más oscuro */
+      transform: scale(1.1);
+}
+
+/* Nuevo estilo para el botón de descripción */
 .show-description-button {
       background-color: #27ae60;
       /* Verde */
@@ -124,4 +133,12 @@ input:focus {
       background-color: #219653;
       /* Verde más oscuro */
       transform: scale(1.1);
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+      to {
+            opacity: 1;
+            transform: translateY(0);
+      }
 }

@@ -4,6 +4,7 @@ import Header from './components/Header';
 import TaskList from './components/TaskList';
 import useTaskManager from './hooks/useTaskManager';
 
+
 function App() {
   const { tasks, addTask, deleteTask, updateTask } = useTaskManager();
 
