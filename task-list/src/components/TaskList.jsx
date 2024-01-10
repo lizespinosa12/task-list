@@ -10,6 +10,12 @@ const TaskList = () => {
   const [newTaskDescription, setNewTaskDescription] = useState('');
 
   const handleAddTask = () => {
+    // Validación de nombre con al menos 3 caracteres
+    if (newTaskTitle.length < 3) {
+      alert('El nombre de la tarea debe tener al menos 3 caracteres.');
+      return;
+    }
+
     addTask(newTaskTitle, newTaskDescription);
     setNewTaskTitle('');
     setNewTaskDescription('');
@@ -17,7 +23,7 @@ const TaskList = () => {
 
   return (
     <div>
-      <h2>Describe tus tareas</h2>
+      <h3>Gestiona aquí todas tus actividades</h3>
       <ul>
         {tasks.map((task) => (
           <li key={task.id}>

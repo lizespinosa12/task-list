@@ -10,12 +10,12 @@ function Task({ name, description, completed, onToggle, onEdit, onDelete }) {
         {name}
       </label>
       {description && <p>{description}</p>}
-      <div>
-        <span onClick={onEdit}>
-          <FaEdit style={{ marginRight: '8px', cursor: 'pointer' }} />
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <span onClick={onEdit} style={{ marginRight: '8px', cursor: 'pointer' }}>
+          <FaEdit />
         </span>
-        <span onClick={onDelete}>
-          <FaTrash style={{ marginLeft: '8px', cursor: 'pointer' }} />
+        <span onClick={onDelete} style={{ marginLeft: '8px', cursor: 'pointer' }}>
+          <FaTrash />
         </span>
       </div>
     </div>

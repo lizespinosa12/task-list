@@ -1,18 +1,30 @@
 import React from 'react';
 import './styles/styles.css';
-import Header from './components/Header';
-import TaskList from './components/TaskList';
-import useTaskManager from './hooks/useTaskManager';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ChakraProvider, CSSReset, Box, Container } from '@chakra-ui/react';
 
+import Header from './components/Header';
+import Home from './components/Home';
+import Tareas from './components/Tareas';
+import SobreNosotros from './components/SobreNosotros';
 
 function App() {
-  const { tasks, addTask, deleteTask, updateTask } = useTaskManager();
-
   return (
-    <div className="App">
-      <Header />
-      <TaskList tasks={tasks} deleteTask={deleteTask} updateTask={updateTask} addTask={addTask} />
-    </div>
+    <ChakraProvider>
+      <CSSReset />
+      <Router>
+        <Box textAlign="center" fontSize="xl">
+          <Header />
+          <Container maxW="600px" mt={10}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/tareas" element={<Tareas />} />
+              <Route path="/sobre-nosotros" element={<SobreNosotros />} />
+            </Routes>
+          </Container>
+        </Box>
+      </Router>
+    </ChakraProvider>
   );
 }
 
